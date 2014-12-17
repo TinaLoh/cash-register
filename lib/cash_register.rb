@@ -1,10 +1,11 @@
 class CashRegister
+  attr_reader :total
 
-  def initialize
-    @total = 0
+  def initialize(total = 0)
+    @total = total
   end
 
-  def total
+  def total  #don't need this method if you have the attr_reader :total above.
   @total
   end
 

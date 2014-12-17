@@ -2,6 +2,14 @@ require 'cash_register'
 
 describe CashRegister do
 
+  describe "initialization" do # this is a process, not method, no pound sign
+    it 'takes an initial amount' do
+      cash_register = CashRegister.new(74.32)
+
+      expect(cash_register.total).to eq(74.32)
+    end
+  end
+
   describe "#total" do  # the pound sign in describe represents a method
     it 'starts at 0' do
       cash_register = CashRegister.new
